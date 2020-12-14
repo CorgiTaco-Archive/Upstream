@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "corgitaco.upstream.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "upstream.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

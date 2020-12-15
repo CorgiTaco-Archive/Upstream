@@ -5,7 +5,7 @@ issueTrackerURL = "https://github.com/CorgiTaco/Upstream/issues"
 [[mods]]
 modId = "upstream"
 version = "1.0"
-displayName = "UpStream"
+displayName = "Upstream"
 logoFile = "logo_text.png"
 credits = "On curse"
 authors = "Corgi Taco"

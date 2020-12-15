@@ -4,6 +4,9 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "upstream.refmap.json",
   "mixins": [
+    "MixinLayer",
+    "MixinMinecraftServer",
+    "MixinRiverLayer"
   ],
   "client": [
   ],

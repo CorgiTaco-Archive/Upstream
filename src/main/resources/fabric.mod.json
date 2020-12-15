@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "upstream",
+  "version": "${version}",
+  "name": "Upstream",
+  "description": "A mod that adds endless and wider rivers.",
+  "authors": [
+    "Corgi Taco"
+  ],
+  "contact": {
+    "sources": "https://github.com/CorgiTaco/Upstream"
+  },
+  "license": "LGPLv3",
+  "icon": "assets/logo_text.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "corgitaco.upstream.Upstream"
+    ]
+  },
+  "mixins": [
+    "upstream.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.10.5",
+    "fabric": ">=0.24.3",
+    "minecraft": ">=1.16.3"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

@@ -1,1 +1,0 @@
-MixinConnector: corgitaco.upstream.mixin.MixinConnector

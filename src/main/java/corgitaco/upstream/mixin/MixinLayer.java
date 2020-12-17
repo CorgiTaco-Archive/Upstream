@@ -37,11 +37,11 @@ public class MixinLayer {
 
 
     @SuppressWarnings("ConstantConditions")
-    @Inject(method = "sample", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "sample(Lnet/minecraft/util/registry/Registry;II)Lnet/minecraft/world/biome/Biome;", at = @At("RETURN"), cancellable = true)
     private void injectUpstreamRivers(Registry<Biome> registry, int x, int z, CallbackInfoReturnable<Biome> cir) {
         MinecraftServer server = Upstream.currentServer;
 
-        setupNoise((int) server.getWorld(World.OVERWORLD).toServerWorld().getSeed());
+        setupNoise((int) server.getWorld(World.OVERWORLD).getSeed());
 
         double noiseVal = noise.GetNoise(x, z) * 10;
         double noise2Val = noise2.GetNoise(x, z);

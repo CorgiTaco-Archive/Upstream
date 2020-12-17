@@ -2,7 +2,6 @@
   "required": true,
   "package": "corgitaco.upstream.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "upstream.refmap.json",
   "mixins": [
     "MixinLayer",
     "MixinMinecraftServer",

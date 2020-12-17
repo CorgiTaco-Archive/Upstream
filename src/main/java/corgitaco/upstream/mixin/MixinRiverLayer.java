@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(NoiseToRiverLayer.class)
 public class MixinRiverLayer {
 
-    @Inject(method = "sample", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "sample(Lnet/minecraft/world/biome/layer/util/LayerRandomnessSource;IIIII)I", at = @At("HEAD"), cancellable = true)
     private void cancelVanillaRiverGeneration(LayerRandomnessSource context, int n, int e, int s, int w, int center, CallbackInfoReturnable<Integer> cir) {
         if (!Upstream.NOISE_CONFIG.VanillaRivers)
             cir.cancel();

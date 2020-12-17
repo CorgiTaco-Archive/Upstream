@@ -38,6 +38,7 @@ public class MixinMinecraftServer {
     @Inject(at = @At("RETURN"), method = "<init>")
     private void addUpstreamRiver(Thread thread, DynamicRegistryManager.Impl impl, LevelStorage.Session session, SaveProperties saveProperties, ResourcePackManager resourcePackManager, Proxy proxy, DataFixer dataFixer, ServerResourceManager serverResourceManager, MinecraftSessionService minecraftSessionService, GameProfileRepository gameProfileRepository, UserCache userCache, WorldGenerationProgressListenerFactory worldGenerationProgressListenerFactory, CallbackInfo ci) {
         configHandler();
+        Upstream.currentServer = (MinecraftServer) (Object) this;
     }
     private void configHandler() {
         Map<String, String> biomeRiverMap = new HashMap<>();
